@@ -1,0 +1,76 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model semihozcanWebsite.WebMVC.Models.ContactModel;
+
+
+
+<!--contact-->
+     <div id="contact">
+         <div class="contact-header">Contact <span class="color"> Me</span>
+        <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
+        <div class="contact-content">
+            <!--Contact form--> 
+             <div class="contact-form">
+                 <div class="form-header">
+                     Message Me
+                 </div>
+                 <form id="myForm" asp-action="Index" asp-controller="Home" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input  id="name" type="text" asp-for="SenderName" placeholder="Name" class="input-name">
+                        <span asp-validation-for="SenderName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="email" asp-for="SenderEmail" placeholder="Email"  class="input-name">
+                        <span asp-validation-for="SenderEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" asp-for ="Subject" id="subject" placeholder="subject" class="input-subject">
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id ="body" asp-for="Message" class="input-textarea" placeholder="message"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id ="submit" value="Send Message!">Submit</button>
+                    </div>
+                 </form>
+               
+             </div>
+            <!--Contact form-->
+            <!--Contact information-->
+             <div class="contact-info">
+                <div class="contact-info-header">
+                    Contact Info
+                </div>
+                <div class="contact-info-content">
+                <div class="contect-info-content-line">
+                    <img src="./images/icon-name.png" class="icon" alt="name-icon">
+                    <div class="contact-info-icon-text">
+                        <h6>Name</h6>
+                        <p>Semih Özcan</p>
+                  </div>
+                </div>
+                <div class="contect-info-content-line">
+                  <img src="./images/icon-location.png" class="icon" alt="location-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Location</h6>
+                      <p>Istanbul, Turkiye</p>
+                </div>
+              </div>
+              
+              <div class="contect-info-content-line">
+                  <img src="./images/icon-email.png" class="icon" alt="email-icon">
+                  <div class="contact-info-icon-text">
+                      <h6>Email</h6>
+                      <p>info@semihozcan.com</p>
+                </div>
+              </div>
+                </div>
+            <!--Contact information end-->
+           </div>
+        </div>
+     </div>
+        <!--contact end-->
+
+
